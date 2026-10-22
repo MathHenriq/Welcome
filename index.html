@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Matheus's House</title>
+<meta name="description" content="Meet Matheus, Applied AI & Data Extraction Analyst at Syngenta. Four rooms, four chapters of his story.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Caveat:wght@600&family=Figtree:wght@400;600;800&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- BODY START -->
+<div class="inventory" role="status" aria-live="polite">
+  <div class="inventory-inner">
+    <span class="mono inv-title">Inventory <strong id="inv-count">0/4</strong></span>
+    <ol class="slots">
+      <li class="slot" data-item="1" title="Power cable"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3v5M16 3v5M5 8h14v4a7 7 0 0 1-14 0z M12 19v3"/></svg><span class="sr">Power cable</span></li>
+      <li class="slot" data-item="2" title="Projector remote"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2h8v20H8z M12 6v.5 M10 10h4 M10 13h4 M10 16h4"/></svg><span class="sr">Projector remote</span></li>
+      <li class="slot" data-item="3" title="Coarse salt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10h10l-1 11H8z M9 10V7a3 3 0 0 1 6 0v3 M11 5.5h.01M13 5.5h.01"/></svg><span class="sr">Coarse salt</span></li>
+      <li class="slot" data-item="4" title="Employee badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14v13H5z M10 2l2 6 2-6 M8 12h3v3H8z M13 12h3 M13 15h3 M8 18h8"/></svg><span class="sr">Employee badge</span></li>
+    </ol>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <header class="hero">
+    <div class="hero-text">
+      <p class="mono eyebrow">Syngenta · new arrival</p>
+      <h1>Matheus's House</h1>
+      <p class="lede">Hi! I'm Matheus. Instead of a regular "about me", I built a small house. Each room holds a chapter of my story, from my first job to my first day here. Read it, look around the room, find the missing item, and the next door opens.</p>
+      <dl class="specs mono">
+        <div><dt>Chapters</dt><dd>4</dd></div>
+        <div><dt>Time</dt><dd>About 3 minutes</dd></div>
+        <div><dt>Difficulty</dt><dd>One coffee</dd></div>
+      </dl>
+      <div class="row">
+        <button class="btn" type="button" id="start">Start the story</button>
+        <button class="link-btn" type="button" id="skip">Short on time? Skip to the end</button>
+      </div>
+    </div>
+    <svg class="house" viewBox="0 0 220 200" role="img" aria-label="A house whose windows light up as you finish each chapter">
+      <path class="chimney" d="M150 40h18v34h-18z"/>
+      <path class="roof" d="M20 92 110 22 200 92z"/>
+      <path class="walls" d="M36 90h148v100H36z"/>
+      <rect class="win" data-room="1" x="54" y="104" width="32" height="26" rx="3"/>
+      <rect class="win" data-room="2" x="134" y="104" width="32" height="26" rx="3"/>
+      <rect class="win" data-room="3" x="54" y="146" width="32" height="26" rx="3"/>
+      <rect class="win" data-room="4" x="134" y="146" width="32" height="26" rx="3"/>
+      <path class="door" d="M97 190v-40a13 13 0 0 1 26 0v40z"/>
+      <circle class="knob" cx="117" cy="172" r="2.5"/>
+    </svg>
+  </header>
+
+  <!-- CHAPTER 1 · IT SUPPORT -->
+  <section class="chapter room" data-room="1" id="room-1">
+    <div class="chapter-head">
+      <p class="mono plate">Chapter 1 of 4</p>
+      <h2>The help desk</h2>
+      <p class="scene-line">A phone ringing. A server room. A very long cable.</p>
+    </div>
+    <p class="lock mono">Locked</p>
+    <div class="scene-grid">
+      <figure class="clip">
+        <video src="assets/racing.mp4" poster="assets/racing-poster.jpg" muted loop playsinline preload="metadata"></video>
+        <button class="sound" type="button" aria-pressed="false">Sound on</button>
+        <figcaption class="hand">Me, racing to the next ticket. Probably.</figcaption>
+      </figure>
+      <div class="narrative">
+        <p>My story with technology started in a server room. I studied Systems Analysis and Development at São Judas University, here in São Paulo, and got my first job as an IT Support Analyst.</p>
+        <p>Someone would say "it's broken", and I'd go find out why. Between tickets I ran through those hallways like it was a Formula 1 race. Some things never change: I still follow every Grand Prix.</p>
+        <p>That job taught me the most useful skill I have: investigate first, guess later.</p>
+      </div>
+    </div>
+    <div class="play">
+      <p class="task"><span class="mono">Your task</span> A ticket just came in: "My computer died. URGENT!!!" Look around the desk and fix it.</p>
+      <svg class="scene" id="scene-1" viewBox="0 0 320 200" aria-label="An office desk. Tap the objects to investigate.">
+        <path class="k f-none" d="M0 190h320"/>
+        <g class="obj" data-obj="outlet" tabindex="0" role="button" aria-label="Wall outlet">
+          <rect class="k f-paper" x="282" y="150" width="20" height="26" rx="3"/>
+          <circle class="f-ink" cx="289" cy="163" r="2"/><circle class="f-ink" cx="295" cy="163" r="2"/>
+        </g>
+        <rect class="f-ink" x="20" y="140" width="250" height="10" rx="2"/>
+        <path class="k f-none thick" d="M32 150v40M258 150v40"/>
+        <g class="obj" data-obj="monitor" tabindex="0" role="button" aria-label="Monitor">
+          <rect class="f-ink" x="100" y="52" width="120" height="78" rx="6"/>
+          <rect class="pc-screen" x="108" y="60" width="104" height="62" rx="3"/>
+          <text class="t-screen" id="pc-text" x="160" y="96" text-anchor="middle"></text>
+          <path class="f-ink" d="M152 130h16v10h-16z"/>
+        </g>
+        <g class="obj" data-obj="note" tabindex="0" role="button" aria-label="Sticky note">
+          <rect class="k f-sun" x="212" y="44" width="30" height="30" transform="rotate(8 227 59)"/>
+          <path class="k" d="M218 54h16M218 60h12" transform="rotate(8 227 59)"/>
+        </g>
+        <g class="obj" data-obj="keyboard" tabindex="0" role="button" aria-label="Keyboard">
+          <rect class="k f-paper" x="190" y="130" width="70" height="10" rx="2"/>
+        </g>
+        <g class="obj" data-obj="mug" tabindex="0" role="button" aria-label="Coffee mug">
+          <path class="k f-orange" d="M50 116h22v24H50z"/><path class="k f-none" d="M72 121h5a5 5 0 0 1 0 10h-5"/>
+        </g>
+        <path class="k f-none thick" id="cable" d="M210 120 Q236 150 240 176 Q244 186 262 184"/>
+        <g class="obj" data-obj="plug" tabindex="0" role="button" aria-label="Loose cable plug">
+          <rect class="k f-soft" id="plug" x="260" y="178" width="14" height="10" rx="2"/>
+        </g>
+      </svg>
+      <p class="msg" id="msg-1" aria-live="polite">Tap the objects to investigate.</p>
+      <div class="hint-wrap">
+        <button class="hint-btn" type="button" data-room="1">Need a hint?</button>
+        <p class="hint-box" hidden>Rule #1 of IT support: check the most obvious thing first. Follow the cable.</p>
+      </div>
+    </div>
+    <div class="solved-note" hidden>
+      <p><strong>Ticket closed in 4 seconds.</strong> "Have you tried plugging it in?" is a classic for a reason.</p>
+      <p class="got mono">+ Power cable added to inventory</p>
+    </div>
+  </section>
+
+  <!-- CHAPTER 2 · TEACHING -->
+  <section class="chapter room locked" data-room="2" id="room-2">
+    <div class="chapter-head">
+      <p class="mono plate">Chapter 2 of 4</p>
+      <h2>The classroom</h2>
+      <p class="scene-line">Five public schools. A lot of noise. Zero patience for boring slides.</p>
+    </div>
+    <p class="lock mono">Locked · find the item in chapter 1</p>
+    <div class="scene-grid">
+      <figure class="clip">
+        <video src="assets/teaching.mp4" poster="assets/teaching-poster.jpg" muted loop playsinline preload="metadata"></video>
+        <button class="sound" type="button" aria-pressed="false">Sound on</button>
+        <figcaption class="hand">Teaching AI, chibi edition.</figcaption>
+      </figure>
+      <div class="narrative">
+        <p>Then I switched sides of the desk. I became an AI instructor, teaching children and teenagers how AI tools work and how to build real things with them. Kids ask the hardest questions, like "teacher, can the robot be my friend?", so you learn to explain big ideas with small words.</p>
+        <p>Soon companies started calling too, and I began training their teams on AI. At the same time I was building apps with LLMs to solve everyday problems for my own team. Those projects got me completely hooked, so I went back to studying and did a postgraduate degree in Artificial Intelligence.</p>
+        <div class="polaroids">
+          <figure class="polaroid tilt-l">
+            <img src="assets/photo-student.jpg" alt="A student typing a prompt to build his first app" loading="lazy" width="900" height="1200">
+            <figcaption class="hand">First app, first prompt</figcaption>
+          </figure>
+          <figure class="polaroid tilt-r">
+            <img src="assets/photo-class.jpg" alt="Students working together at a round table full of computers" loading="lazy" width="1100" height="825">
+            <figcaption class="hand">The round table</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="play">
+      <p class="task"><span class="mono">Your task</span> Class starts in one minute and the projector won't turn on. Someone hid the remote. Find it.</p>
+      <svg class="scene" id="scene-2" viewBox="0 0 320 200" aria-label="A classroom. Tap the objects to investigate.">
+        <path class="k f-none" d="M0 190h320"/>
+        <g class="obj" data-obj="board" tabindex="0" role="button" aria-label="Blackboard">
+          <rect class="k f-wood" x="14" y="16" width="146" height="78" rx="5"/>
+          <rect class="f-board" x="21" y="23" width="132" height="64" rx="3"/>
+          <text class="t-chalk" x="87" y="63" text-anchor="middle">AI 101</text>
+        </g>
+        <polygon class="found beam" points="226,128 182,22 302,22 302,84"/>
+        <g class="obj" data-obj="screen" tabindex="0" role="button" aria-label="Projection screen">
+          <rect class="k f-white proj-screen" x="178" y="14" width="128" height="76" rx="3"/>
+          <text class="t-screen dark" id="proj-text" x="242" y="58" text-anchor="middle"></text>
+        </g>
+        <rect class="f-ink" x="14" y="138" width="134" height="9" rx="2"/>
+        <path class="k f-none thick" d="M22 147v43M140 147v43"/>
+        <g class="obj" data-obj="drawer" tabindex="0" role="button" aria-label="Desk drawer">
+          <rect class="k f-wood" x="92" y="147" width="44" height="20" rx="2"/><path class="k" d="M108 157h12"/>
+        </g>
+        <g class="obj" data-obj="robot" tabindex="0" role="button" aria-label="Toy robot">
+          <path class="k f-none" d="M44 92v-8"/><circle class="k f-orange" cx="44" cy="81" r="3.5"/>
+          <rect class="k f-paper" x="30" y="92" width="28" height="22" rx="5"/>
+          <circle class="f-blue" cx="38" cy="102" r="3"/><circle class="f-blue" cx="50" cy="102" r="3"/>
+          <path class="k f-none" d="M39 109h10"/>
+          <rect class="k f-paper" x="27" y="114" width="34" height="24" rx="4"/>
+          <rect class="k f-sun hatch" x="36" y="119" width="16" height="13" rx="2"/>
+        </g>
+        <g class="found">
+          <rect class="k f-ink" x="66" y="112" width="12" height="24" rx="3"/>
+          <circle class="f-orange" cx="72" cy="118" r="2.4"/><path class="k-light" d="M69 125h6M69 129h6"/>
+        </g>
+        <rect class="f-ink" x="172" y="140" width="136" height="9" rx="2"/>
+        <path class="k f-none thick" d="M180 149v41M300 149v41"/>
+        <g class="obj" data-obj="projector" tabindex="0" role="button" aria-label="Projector">
+          <rect class="k f-paper" x="186" y="120" width="42" height="20" rx="3"/>
+          <circle class="k f-board" cx="220" cy="130" r="5.5"/>
+        </g>
+        <g class="obj" data-obj="laptop" tabindex="0" role="button" aria-label="Student laptop">
+          <path class="k f-ink" d="M252 110h40v28h-40z"/><path class="k f-paper" d="M246 138h52l-4 2h-44z"/>
+          <path class="k-light" d="M258 118h22M258 124h14"/>
+        </g>
+        <g class="obj" data-obj="backpack" tabindex="0" role="button" aria-label="Backpack">
+          <path class="k f-orange" d="M150 190v-24a14 14 0 0 1 28 0v24z"/><path class="k f-none" d="M156 176h16"/>
+        </g>
+      </svg>
+      <p class="msg" id="msg-2" aria-live="polite">Tap the objects to investigate.</p>
+      <div class="hint-wrap">
+        <button class="hint-btn" type="button" data-room="2">Need a hint?</button>
+        <p class="hint-box" hidden>Kids love hiding things inside their favorite classmate. The one with an antenna.</p>
+      </div>
+    </div>
+    <div class="solved-note" hidden>
+      <p><strong>Class saved.</strong> Five schools, a lot of "teacher, look what I made!", and some of the best days of my life.</p>
+      <p class="got mono">+ Projector remote added to inventory</p>
+    </div>
+  </section>
+
+  <!-- CHAPTER 3 · BARBECUE -->
+  <section class="chapter room locked" data-room="3" id="room-3">
+    <div class="chapter-head">
+      <p class="mono plate">Chapter 3 of 4</p>
+      <h2>The backyard</h2>
+      <p class="scene-line">Saturday. Smoke in the air, soccer on TV, and everyone I love.</p>
+    </div>
+    <p class="lock mono">Locked · find the item in chapter 2</p>
+    <div class="scene-grid">
+      <figure class="clip">
+        <video src="assets/grill.mp4" poster="assets/grill-poster.jpg" muted loop playsinline preload="metadata"></video>
+        <button class="sound" type="button" aria-pressed="false">Sound on</button>
+        <figcaption class="hand">Grill master, chibi edition.</figcaption>
+      </figure>
+      <div class="narrative">
+        <p>Off the clock, I play and watch soccer, follow Formula 1 and play online games with friends. I build AI side projects just for fun. On weekends you'll find me at the park or the mall with my girlfriend, or at home with my family.</p>
+        <p>And when there's a barbecue, I'm the one at the grill. I'm humbly very good at churrasco. Humbly.</p>
+        <div class="polaroids">
+          <figure class="polaroid tilt-r">
+            <img src="assets/photo-bbq.jpg" alt="A tray of raw beef cuts and sausages ready for the grill" loading="lazy" width="800" height="1422">
+            <figcaption class="hand">Saturday's lineup</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="play">
+      <p class="task"><span class="mono">Your task</span> The guests are arriving and the picanha is on the grill. Something is missing. Find it before anyone notices.</p>
+      <svg class="scene" id="scene-3" viewBox="0 0 320 200" aria-label="A backyard barbecue. Tap the objects to investigate.">
+        <path class="k f-none" d="M0 190h320"/>
+        <path class="k f-none" d="M0 10 Q80 30 160 10 Q240 30 320 10"/>
+        <g class="lights"><circle cx="40" cy="18" r="3.5"/><circle cx="80" cy="21" r="3.5"/><circle cx="120" cy="18" r="3.5"/><circle cx="200" cy="18" r="3.5"/><circle cx="240" cy="21" r="3.5"/><circle cx="280" cy="18" r="3.5"/></g>
+        <g class="obj" data-obj="tv" tabindex="0" role="button" aria-label="TV showing a soccer match">
+          <rect class="k f-ink" x="16" y="38" width="86" height="56" rx="4"/>
+          <rect class="f-leaf" x="22" y="44" width="74" height="44"/>
+          <path class="k-light" d="M59 44v44"/><circle class="k-light" cx="59" cy="66" r="8"/>
+          <circle class="k f-white" cx="78" cy="74" r="4"/>
+          <path class="k f-none" d="M59 94v8M48 102h22"/>
+        </g>
+        <g class="obj" data-obj="grill" tabindex="0" role="button" aria-label="Grill">
+          <path class="k f-none thick" d="M132 150l-10 40M198 150l10 40"/>
+          <path class="k f-ink" d="M110 116h110q0 36-55 36t-55-36z"/>
+          <path class="k f-none" d="M110 116h110"/>
+        </g>
+        <g class="found flames"><path d="M140 112q-6-12 2-22q2 10 8 12q-2 6-10 10z"/><path d="M178 112q-6-14 4-26q2 12 9 15q-3 7-13 11z"/><path d="M204 112q-4-9 2-16q2 8 6 9q-2 4-8 7z"/></g>
+        <g class="obj" data-obj="picanha" tabindex="0" role="button" aria-label="Picanha on the grill">
+          <path class="k picanha" d="M128 114q4-16 30-16q32-2 46 7q6 4 4 9z"/>
+          <path class="k f-white" d="M134 104q24-10 58-4q8 2 12 5q-34-6-70-1z"/>
+        </g>
+        <g class="found sparkle"><path d="M150 92l2-6 2 6 6 2-6 2-2 6-2-6-6-2z"/><path d="M190 84l1.5-4 1.5 4 4 1.5-4 1.5-1.5 4-1.5-4-4-1.5z"/></g>
+        <g class="obj" data-obj="cooler" tabindex="0" role="button" aria-label="Cooler">
+          <rect class="k f-blue" x="24" y="152" width="62" height="38" rx="4"/>
+          <rect class="k f-white" x="20" y="144" width="70" height="10" rx="3"/>
+        </g>
+        <rect class="k f-wood" x="228" y="132" width="84" height="8" rx="2"/>
+        <path class="k f-none thick" d="M236 140v50M304 140v50"/>
+        <g class="obj" data-obj="ketchup" tabindex="0" role="button" aria-label="Ketchup bottle">
+          <path class="k f-ketchup" d="M238 132v-24a6 6 0 0 1 4-6h8a6 6 0 0 1 4 6v24z"/>
+          <rect class="k f-paper" x="242" y="94" width="8" height="8" rx="1"/>
+        </g>
+        <g class="obj" data-obj="salt" tabindex="0" role="button" aria-label="Salt jar">
+          <rect class="k f-white" x="266" y="108" width="30" height="24" rx="4"/>
+          <rect class="k f-blue" x="264" y="101" width="34" height="8" rx="2"/>
+          <text class="t-label" x="281" y="124" text-anchor="middle">SALT</text>
+        </g>
+        <g class="obj" data-obj="charcoal" tabindex="0" role="button" aria-label="Charcoal bag">
+          <path class="k f-paper" d="M252 190v-30l4-6h30l4 6v30z"/>
+          <text class="t-label" x="271" y="178" text-anchor="middle">COAL</text>
+        </g>
+      </svg>
+      <p class="msg" id="msg-3" aria-live="polite">Tap the objects to investigate.</p>
+      <div class="hint-wrap">
+        <button class="hint-btn" type="button" data-room="3">Need a hint?</button>
+        <p class="hint-box" hidden>In Brazil, a real picanha needs only one seasoning: coarse, white and simple.</p>
+      </div>
+    </div>
+    <div class="solved-note" hidden>
+      <p><strong>Coarse salt and nothing else.</strong> That's a real churrasco. You're officially invited to the next team barbecue.</p>
+      <p class="got mono">+ Coarse salt added to inventory</p>
+    </div>
+  </section>
+
+  <!-- CHAPTER 4 · DAY ONE -->
+  <section class="chapter room locked" data-room="4" id="room-4">
+    <div class="chapter-head">
+      <p class="mono plate">Chapter 4 of 4</p>
+      <h2>Day one</h2>
+      <p class="scene-line">October 20, 2026. A new building, a new desk, and a very excited introvert.</p>
+    </div>
+    <p class="lock mono">Locked · find the item in chapter 3</p>
+    <div class="scene-grid">
+      <figure class="clip">
+        <video src="assets/arrival.mp4" poster="assets/arrival-poster.jpg" muted loop playsinline preload="metadata"></video>
+        <button class="sound" type="button" aria-pressed="false">Sound on</button>
+        <figcaption class="hand">First day. Thumbs up.</figcaption>
+      </figure>
+      <div class="narrative">
+        <p>And that brings us to today. I'm the new Applied AI &amp; Data Extraction Analyst at Syngenta. My job is to turn messy documents into useful data, which is exactly what got me into AI in the first place.</p>
+        <p>One more thing before you meet me: I'm an introvert. Big crowds drain my battery fast. And yet, people are my favorite subject. I love good conversations, hearing how someone's life brought them to where they are, and turning colleagues into friends. Quiet doesn't mean distant.</p>
+      </div>
+    </div>
+    <div class="play">
+      <p class="task"><span class="mono">Your task</span> First day, and the office door won't open. Find a way in.</p>
+      <svg class="scene" id="scene-4" viewBox="0 0 320 200" aria-label="An office entrance. Tap the objects to investigate.">
+        <path class="k f-none" d="M0 190h320"/>
+        <g class="obj" data-obj="plant" tabindex="0" role="button" aria-label="Plant">
+          <path class="k f-leaf" d="M38 160q-22-20-14-46q14 18 14 46z"/>
+          <path class="k f-leaf" d="M40 160q2-34 22-50q4 30-22 50z"/>
+          <path class="k f-leaf" d="M39 160q-6-30 2-60q12 28-2 60z"/>
+          <path class="k f-orange" d="M24 160h32l-4 30H28z"/>
+        </g>
+        <rect class="k f-wood" x="72" y="140" width="62" height="8" rx="2"/>
+        <path class="k f-none thick" d="M80 148v42M126 148v42"/>
+        <g class="obj" data-obj="coffee" tabindex="0" role="button" aria-label="Coffee machine">
+          <rect class="k f-ink" x="80" y="78" width="46" height="62" rx="4"/>
+          <rect class="f-paper" x="88" y="86" width="30" height="12" rx="2"/>
+          <path class="k f-soft" d="M98 104h10v6H98z"/>
+          <rect class="k f-white" x="96" y="122" width="14" height="14" rx="2"/>
+        </g>
+        <g class="obj" data-obj="backpack" tabindex="0" role="button" aria-label="Your backpack">
+          <path class="k f-blue" d="M140 190v-28a16 16 0 0 1 32 0v28z"/><path class="k f-none" d="M146 174h20"/>
+        </g>
+        <g class="found badge">
+          <path class="k f-none" d="M150 112l6 14 6-14"/>
+          <rect class="k f-white" x="145" y="124" width="22" height="28" rx="3"/>
+          <rect class="f-sun" x="149" y="129" width="7" height="8"/><path class="k" d="M159 131h5M149 142h14M149 146h9"/>
+        </g>
+        <rect class="k f-paper" x="190" y="16" width="92" height="174" rx="2"/>
+        <defs><clipPath id="door-clip"><rect x="198" y="24" width="76" height="166"/></clipPath></defs>
+        <rect class="f-sun" x="198" y="24" width="76" height="166"/>
+        <g class="obj" data-obj="door" tabindex="0" role="button" aria-label="Glass door" clip-path="url(#door-clip)">
+          <g class="door-glass">
+            <rect class="k f-glass" x="198" y="24" width="76" height="166" rx="2"/>
+            <path class="k-light glare" d="M210 40l20-12M210 56l34-22"/>
+            <text class="t-label" x="236" y="104" text-anchor="middle">WELCOME</text>
+          </g>
+        </g>
+        <g class="obj" data-obj="reader" tabindex="0" role="button" aria-label="Card reader">
+          <rect class="k f-ink" x="290" y="90" width="18" height="28" rx="3"/>
+          <circle class="led" cx="299" cy="99" r="3.5"/>
+          <rect class="f-soft" x="294" y="106" width="10" height="7" rx="1"/>
+        </g>
+      </svg>
+      <p class="msg" id="msg-4" aria-live="polite">Tap the objects to investigate.</p>
+      <div class="hint-wrap">
+        <button class="hint-btn" type="button" data-room="4">Need a hint?</button>
+        <p class="hint-box" hidden>Every new employee gets one thing on day one. It's probably still in your bag.</p>
+      </div>
+    </div>
+    <div class="solved-note" hidden>
+      <p><strong>Beep. The door opens.</strong> Someone is waiting on the other side.</p>
+      <p class="got mono">+ Employee badge added to inventory</p>
+      <form class="name-form" id="name-form">
+        <p class="task"><span class="mono">One last thing</span> Who's there?</p>
+        <div class="row">
+          <label class="sr" for="visitor-name">Your first name</label>
+          <input id="visitor-name" type="text" maxlength="24" autocomplete="given-name" placeholder="Your first name">
+          <button class="btn" type="submit">Say hi</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- EPILOGUE -->
+  <section class="finale" id="finale" hidden>
+    <div class="finale-top">
+      <div class="finale-text">
+        <p class="mono eyebrow">Epilogue · Back to the present</p>
+        <h2>Nice to meet you, <span id="visitor">friend</span>!</h2>
+        <p class="lede">That's how I got here. The house ends here, but the story doesn't: the next chapter is Syngenta, and you're already in it. I'm excited to contribute, keep learning and grow together with this team.</p>
+      </div>
+      <figure class="polaroid big tilt-r">
+        <img src="assets/photo-syngenta.jpg" alt="Matheus smiling in front of the Syngenta wall on his first day" loading="lazy" width="900" height="1200">
+        <figcaption class="hand">Day one. Real photo, no chibi.</figcaption>
+      </figure>
+    </div>
+    <div class="finale-grid">
+      <div class="card">
+        <h3 class="mono">A quick heads-up</h3>
+        <p>If I'm quiet in my first meetings, I'm just recharging. Ask me one question, about anything, and you'll see how fast I start talking.</p>
+      </div>
+      <div class="card">
+        <h3 class="mono">Ask me about</h3>
+        <ul class="chips">
+          <li>My AI side projects</li>
+          <li>Last weekend's match</li>
+          <li>The best cut for churrasco</li>
+          <li>Teaching AI to teenagers</li>
+          <li>Your own story</li>
+        </ul>
+      </div>
+    </div>
+    <p class="mono recap">You collected: a power cable, a projector remote, coarse salt and a badge. That's pretty much me.</p>
+    <div class="row">
+      <a class="btn" href="https://www.linkedin.com/in/matheus-henrique-198763205" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      <button class="link-btn" type="button" id="replay">Walk through the house again</button>
+    </div>
+  </section>
+
+  <footer class="foot mono">Built with HTML, CSS and a pinch of JavaScript.</footer>
+</main>
+<!-- BODY END -->
+<script src="script.js"></script>
+</body>
+</html>
